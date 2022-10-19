@@ -40,7 +40,7 @@ void loops3(void){
     for(i = START; condition(i); i--){
         printf("%d ", i);
     }
-    printf("blastoff\n")
+    printf("blastoff\n");
 }
 
 /* this function uses a break statement to terminat a loop */
@@ -58,7 +58,7 @@ void loops4(void){
             break;
         }
     }
-    printf("early blastoff\n")
+    printf("early blastoff\n");
 }
 
 /* this function uses a continue statement to skip the current
@@ -77,5 +77,5 @@ void loops5(void){
         }
         printf("%d ", i);
     }
-    printf("even blastoff\n")
+    printf("even blastoff\n");
 }
