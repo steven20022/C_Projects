@@ -1,5 +1,5 @@
 // include pre-processor directive
-#include "./headers/Pointers.h";
+#include "./headers/Pointers.h"
 
 /*
  * each variable and function gets stored in memory (in the stack).
@@ -54,4 +54,104 @@ int getDataAtAddress(void){
     // return the value stored at the pointer
     // the star is not needed when using an address in a pointer
     return (*ptr);
+}
+
+/* this function returns the value stored at the address of the
+ * global variable j */
+double storeDataAddress(void){
+    //declare a pointer to an integer
+    // the star is needed when declaring a pointer
+    double *ptr;
+
+    // get the address of global variable i and store
+    // it in pointer
+    // must use the & when accessing an address of a variable
+    // the star is not needed when storing an address in a pointer
+    ptr = &j;
+
+    // change the value in the variable j via the pointer
+    // the star is needed when accessing a value in a pointer
+    *ptr += *ptr;
+
+    // return the value stored at the pointer
+    // the star is not needed when using an address in a pointer
+    return (*ptr);
+}
+
+/* this function returns the size of a double stored in a pointer  */
+int getDoubleBytes(void){
+    //declare a pointer to an integer
+    // the star is needed when declaring a pointer
+    double *ptr;
+
+    // get the address of global variable i and store
+    // it in pointer
+    // must use the & when accessing an address of a variable
+    // the star is not needed when storing an address in a pointer
+    ptr = &j;
+
+    // change the value in the variable j via the pointer
+    // the star is needed when accessing a value in a pointer
+    *ptr += *ptr;
+
+    // return the size of the value stored at the pointer
+    // the star is not needed when using an address in a pointer
+    return (sizeof(*ptr));
+}
+
+/* this function returns the size of the pointer to a double */
+int getPointerToDoubleBytes(void){
+    //declare a pointer to an integer
+    // the star is needed when declaring a pointer
+    double *ptr;
+
+    // get the address of global variable i and store
+    // it in pointer
+    // must use the & when accessing an address of a variable
+    // the star is not needed when storing an address in a pointer
+    ptr = &j;
+
+    // change the value in the variable j via the pointer
+    // the star is needed when accessing a value in a pointer
+    *ptr += *ptr;
+
+    // return the size of the pointer to a double
+    // the star is not needed when using an address in a pointer
+    return (sizeof(ptr));
+}
+
+/* this function print the address of a pointer to a double that stores null */
+void pointerToNull(void){
+    //declare a pointer to an integer
+    // the star is needed when declaring a pointer
+    double *ptr;
+
+    // store a value of null at the address in the pointer
+    // to a double
+    // the star is not needed when storing an address in a pointer
+    // NULL is an address where no data exists
+    ptr = NULL;
+
+    // get the address of the global static variable j
+    // and store it in the pointer
+    // must use the & when accessing an address of a variable
+    // the star is not needed when storing an address in a pointer
+    ptr = &j;
+
+    // check if the pointer isn't NULL
+    // the star is not needed when accessing the address of a pointer
+    if (ptr)
+    {
+        printf("The pointer is not null %p\n", ptr);
+    }
+    else
+    {
+        printf("The pointer is null %p\n", ptr);
+    }
+    
+    
+
+    // return the size of the pointer to a double
+    // the star is not needed when using an address in a pointer
+    return (sizeof(ptr));
 }
