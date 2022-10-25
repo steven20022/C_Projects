@@ -128,7 +128,7 @@ void pointerToNull(void){
 
     // store a value of null at the address in the pointer
     // to a double
-    // the star is not needed when storing an address in a pointer
+    //  the star is not needed when storing an address in a pointer
     // NULL is an address where no data exists
     ptr = NULL;
 

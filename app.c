@@ -6,6 +6,7 @@
 #include "./headers/Loops.h"
 #include "./headers/Pointers.h"
 #include "./headers/PassByReference.h"
+#include "./headers/AssignmentA.h"
 
 int main(void)
 {
@@ -45,6 +46,12 @@ int main(void)
 
     // call cartesianToPolar
     // must use & to access an address of a variable
-    cartesianToPolar(x, y, &radiusPtr, &thetaPtr);
-    printf("(%.2f, %.2f) equals (%.2f, %.2f)", x, y, radiusPtr, thetaPtr);
+    // cartesianToPolar(x, y, &radiusPtr, &thetaPtr);
+    // printf("(%.2f, %.2f) equals (%.2f, %.2f)", x, y, radiusPtr, thetaPtr);
+
+    // Assignment 2A
+    int n = 5;
+    int *ptr = &n;
+    // genAdditionTables(n);
+    genAdditionTablesReference(ptr);
 }
